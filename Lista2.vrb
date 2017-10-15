@@ -1,23 +1,16 @@
 \frametitle{Questão 4}
-			Sejam $n = 20, \bar{x} = 0.06$ e $s = 0.009$, deseja-se testar:
-			\begin{itemize}
-				\item $H_{0}:  \mu_{0} = 0.05pol$
-				\item $H_{1}:  \mu_{0} \neq 0.05pol$
-			\end{itemize}
-			Trata-se, portanto, de um \textbf{Teste t bicaudal}.  Para:
-			\begin{enumerate}[(a)]
-				\item $\alpha = 0.05$\\
-				Calculadndo $t = \frac{\bar{x} - \mu_{0}}{s/\sqrt{n}} = \frac{0.06 - 0.05}{0.009/\sqrt{20}} = 4.969$\\
-				Calculando $t_{\frac{\alpha}{2},19}$:
+			\begin{enumerate}[b)]
+				\item $\alpha  = 0.01$\\
+				Para o mesmo $t = 4.969$ e $t_{1-\frac{\alpha}{2},19} \ = t_{1-\frac{0.01}{2},19} = t_{0.995,19} $:
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{qt}\hlstd{(}\hlnum{0.025}\hlstd{,}\hlnum{19}\hlstd{)}
+\hlkwd{qt}\hlstd{(}\hlnum{0.995}\hlstd{,}\hlnum{19}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
-## [1] -2.093024
+## [1] 2.860935
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-                        Como $t > t_{\frac{\alpha}{2}} $ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.05}$
+			Como $t > t_{1-\frac{\alpha}{2},19}$ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.01}$
 			\end{enumerate}

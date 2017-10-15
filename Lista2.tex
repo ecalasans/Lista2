@@ -108,7 +108,7 @@
     	\begin{frame}
     		\frametitle{Questão 2}
     		Sejam $n_{1} = 20, \bar{x}_{1} = 510, s^{2}_{1} = 20$ e $n_{2} = 15, \bar{x}_{2} = 620, s^{2}_{2} = 30$ com $\sigma_{1}^{2} \neq \sigma_{2}^{2}$., deseja-se calcular:\\
-    		\begin{enumerate}
+    		\begin{enumerate}[a)]
     			\item \textbf{{Um intervalo de confiança de 95\% para}} $\boldsymbol{\mu_{1} - \mu_{2}}$\\
     			
     			Como $n \leq 30$ em ambos os casos, usamos uma distribuição \textbf{t-Student}.  Assim, para $\sigma_{1}^{2} \neq \sigma_{2}^{2}$ temos que $$\mu_{1}-\mu_{2} = (\bar{x}_{1} - \bar{x}_{2}) \pm t_{df}\sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}$$
@@ -120,7 +120,7 @@
     	
     	\begin{frame}[fragile]
     		\frametitle{Questão 2}
-    		\begin{enumerate}
+    		\begin{enumerate}[a)]
     			\item cont.$$\mu_{1} - \mu_{2} = (\bar{x}_1) - \bar{x}_2)\pm t_{0,975,26}\sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}$$
     			
     			Pelo \textbf{RStudio}:
@@ -143,8 +143,7 @@
     	
     	\begin{frame}
     		\frametitle{Questão 2}
-    		\begin{enumerate}
-    			\setcounter{enumi}{1}
+    		\begin{enumerate}[b)]
     			\item Dadas $\sigma_{1}^{2}$ e $\sigma_{2}^{2}$ as variânicas de duas V.A.s com distribuição normal e $s_{1}^2$ e $s_{2}^{2}$ as variâncias amostrais, define-se \textbf{F} com \textbf{distribuição F de Snedecom}:
     		$$\boldsymbol{F = \frac{s^{2}_{1}/\sigma_{1}^{2}}{s^{2}_{2}/\sigma_{2}^{2}} = \frac{s^{2}_{1}}{s^{2}_{2}} \frac{\sigma_{2}^{2}}{\sigma_{1}^{2}}}$$ 
     			para os graus de liberdade $df_{1} = m-1$ e $df_{2} = n-1$\\
@@ -155,8 +154,7 @@
     
     	\begin{frame}
 	    	\frametitle{Questão 2}
-	    	\begin{enumerate}
-	    		\setcounter{enumi}{1}
+	    	\begin{enumerate}[b)]
 	    		\item \textit{cont.}\\
 	    			Para tanto:
 	    			\begin{align*}
@@ -169,8 +167,7 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{Questão 2}
-		\begin{enumerate}
-			\setcounter{enumi}{1}
+		\begin{enumerate}[b)]
 			\item \textit{cont.}\\
 			Substituindo os valores:\\
 			$$\frac{1}{F_{0.975,19,14}}\frac{20}{30} < \frac{\sigma_{1}^{2}}{\sigma_{2}^{2}} < \frac{1}{F_{0.975,19,14}}\frac{20}{30}$$
@@ -191,8 +188,7 @@
 	
 	\begin{frame}
 		\frametitle{Questão 2}
-		\begin{enumerate}
-			\setcounter{enumi}{1}
+		\begin{enumerate}[b)]
 			\item \textit{cont.}\\
 			$$F_{0.975,19,14} = \frac{1}{F_{0.025,19,14}} = \frac{1}{0.378} = 2.645$$
 			
@@ -212,30 +208,30 @@
 				\item $H_{1}:  \mu_{0} \neq 1690h$
 			\end{itemize}
 			Trata-se, portanto, de um \textbf{Teste Z bicaudal}.  Para:
-			\begin{enumerate}[(a)]
+			\begin{enumerate}[a)]
 				\item $\alpha = 0.05$\\
 				Calculadndo $Z = \frac{\bar{x} - \mu_{0}}{s/\sqrt{n}} = \frac{1660-1690}{90/\sqrt{300}} = -5,77$\\
 				Conforme calculado em questão anterior:$$Z_{0.025} = -1.96 \hspace{0.5cm}Z_{0.975} = 1.96$$ 
-				Como $ Z > Z_{\frac{\alpha}{2}}$ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.05}$  
+				Como $ Z < Z_{\frac{\alpha}{2}}$ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.05}$  
 			\end{enumerate}
 		\end{frame}
 		
 		\begin{frame}[fragile]
 			\frametitle{Questão 3}
-			\begin{enumerate}[(b)]
+			\begin{enumerate}[b)]
 				\item $\alpha = 0.01$\\
 				Para o mesmo $Z = -5.77$ e $Z_{\frac{\alpha}{2}} \ = Z_{\frac{0.01}{2}} = Z_{0.005} $
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{qnorm}\hlstd{(}\hlnum{0.005}\hlstd{)}
+\hlkwd{qnorm}\hlstd{(}\hlnum{0.025}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
-## [1] -2.575829
+## [1] -1.959964
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-			Como $Z > Z_{\frac{\alpha}{2} }$ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.01}$
+			Como $Z < Z_{\frac{\alpha}{2} }$ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.01}$
 			\end{enumerate}
 		\end{frame}
 	\section{Questão 4}
@@ -247,21 +243,40 @@
 				\item $H_{1}:  \mu_{0} \neq 0.05pol$
 			\end{itemize}
 			Trata-se, portanto, de um \textbf{Teste t bicaudal}.  Para:
-			\begin{enumerate}[(a)]
+			\begin{enumerate}[a)]
 				\item $\alpha = 0.05$\\
 				Calculadndo $t = \frac{\bar{x} - \mu_{0}}{s/\sqrt{n}} = \frac{0.06 - 0.05}{0.009/\sqrt{20}} = 4.969$\\
-				Calculando $t_{\frac{\alpha}{2},19}$:
+				Calculando $t_{1-\frac{\alpha}{2},19}$:
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{qt}\hlstd{(}\hlnum{0.025}\hlstd{,}\hlnum{19}\hlstd{)}
+\hlkwd{qt}\hlstd{(}\hlnum{0.975}\hlstd{,}\hlnum{19}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
-## [1] -2.093024
+## [1] 2.093024
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-                        Como $t > t_{\frac{\alpha}{2}} $ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.05}$
+                        Como $t > t_{1-\frac{\alpha}{2}} $ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.05}$
+			\end{enumerate}
+		\end{frame}
+		
+		\begin{frame}[fragile]
+			\frametitle{Questão 4}
+			\begin{enumerate}[b)]
+				\item $\alpha  = 0.01$\\
+				Para o mesmo $t = 4.969$ e $t_{1-\frac{\alpha}{2},19} \ = t_{1-\frac{0.01}{2},19} = t_{0.995,19} $:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{qt}\hlstd{(}\hlnum{0.995}\hlstd{,}\hlnum{19}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 2.860935
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+			Como $t > t_{1-\frac{\alpha}{2},19}$ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.01}$
 			\end{enumerate}
 		\end{frame}
 	\section{Questão 5}
@@ -269,6 +284,7 @@
 	\section{Questão 7}
 	\section{Questão 8}
 \end{document}
+
 
 
 
