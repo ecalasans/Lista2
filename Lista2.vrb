@@ -1,16 +1,29 @@
-\frametitle{Questão 4}
-			\begin{enumerate}[b)]
-				\item $\alpha  = 0.01$\\
-				Para o mesmo $t = 4.969$ e $t_{1-\frac{\alpha}{2},19} \ = t_{1-\frac{0.01}{2},19} = t_{0.995,19} $:
+\frametitle{Questão 5}
+			\begin{enumerate}[a)]
+				\item $\alpha = 0.01$\\
+				Calculando $f_{0.01,24,19}$:
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{qt}\hlstd{(}\hlnum{0.995}\hlstd{,}\hlnum{19}\hlstd{)}
+\hlkwd{qf}\hlstd{(}\hlnum{0.01}\hlstd{,}\hlnum{24}\hlstd{,}\hlnum{19}\hlstd{,}\hlkwc{lower.tail} \hlstd{=} \hlnum{FALSE}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
-## [1] 2.860935
+## [1] 2.924866
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-			Como $t > t_{1-\frac{\alpha}{2},19}$ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.01}$
+                        Como $f > f_{0.01,24,19}$ é \textbf{FALSO falhamos em rejeitar }$\boldsymbol{H_{0}}$ com $\alpha = 0.01$
+                                    \item $\alpha = 0.05$\\
+                                    Calculando $f_{0.05,24,19}$:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{qf}\hlstd{(}\hlnum{0.05}\hlstd{,}\hlnum{24}\hlstd{,}\hlnum{19}\hlstd{,}\hlkwc{lower.tail} \hlstd{=} \hlnum{FALSE}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 2.114143
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+			Como $f > f_{0.01,24,19}$ é \textbf{FALSO falhamos em rejeitar }$\boldsymbol{H_{0}}$ com $\alpha = 0.05$
 			\end{enumerate}

@@ -204,8 +204,8 @@
 			\frametitle{Questão 3}
 			Sejam $n = 300, \bar{x} = 1660$ e $s = 90h$, deseja-se testar:
 			\begin{itemize}
-				\item $H_{0}:  \mu_{0} = 1690h$
-				\item $H_{1}:  \mu_{0} \neq 1690h$
+				\item $\boldsymbol{H_{0}:  \mu_{0} = 1690h}$
+				\item $\boldsymbol{H_{1}:  \mu_{0} \neq 1690h}$
 			\end{itemize}
 			Trata-se, portanto, de um \textbf{Teste Z bicaudal}.  Para:
 			\begin{enumerate}[a)]
@@ -239,8 +239,8 @@
 			\frametitle{Questão 4}
 			Sejam $n = 20, \bar{x} = 0.06$ e $s = 0.009$, deseja-se testar:
 			\begin{itemize}
-				\item $H_{0}:  \mu_{0} = 0.05pol$
-				\item $H_{1}:  \mu_{0} \neq 0.05pol$
+				\item $\boldsymbol{H_{0}:  \mu_{0} = 0.05pol}$
+				\item $\boldsymbol{H_{1}:  \mu_{0} \neq 0.05pol}$
 			\end{itemize}
 			Trata-se, portanto, de um \textbf{Teste t bicaudal}.  Para:
 			\begin{enumerate}[a)]
@@ -279,11 +279,56 @@
 			Como $t > t_{1-\frac{\alpha}{2},19}$ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.01}$
 			\end{enumerate}
 		\end{frame}
+		
 	\section{Questão 5}
+	        \begin{frame}
+			\frametitle{Questão 5}
+			Sejam $n_{a} = 20, s_{a} = 8(s_{a}^{2} = 64)$ para a turma A e $n_{b} = 25, s_{b} = 10(s_{b}^{2} = 100)$ para a turma B,
+			deseja-se saber se a variabilidade de B é maior que a de A.  Assim temos:
+			\begin{itemize}
+				\item $\boldsymbol{H_{0}:  \sigma_{b}^{2} = \sigma_{a}^{2}}$
+				\item $\boldsymbol{H_{1}:  \sigma_{b}^{2} > \sigma_{a}^{2}}$
+			\end{itemize}
+			Trata-se, portanto, de um \textbf{teste \textit{f} unicaudal de cauda longa}.  Calculando \textit{f}:
+			$$f = \frac{s_{b}^{2}}{s_{a}^{2}} = \frac{100}{64} = 1.562$$
+		\end{frame}
+	
+		\begin{frame}[fragile]
+			\frametitle{Questão 5}
+			\begin{enumerate}[a)]
+				\item $\alpha = 0.01$\\
+				Calculando $f_{0.01,24,19}$:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{qf}\hlstd{(}\hlnum{0.01}\hlstd{,}\hlnum{24}\hlstd{,}\hlnum{19}\hlstd{,}\hlkwc{lower.tail} \hlstd{=} \hlnum{FALSE}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 2.924866
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+                        Como $f > f_{0.01,24,19}$ é \textbf{FALSO falhamos em rejeitar }$\boldsymbol{H_{0}}$ com $\alpha = 0.01$
+                                    \item $\alpha = 0.05$\\
+                                    Calculando $f_{0.05,24,19}$:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{qf}\hlstd{(}\hlnum{0.05}\hlstd{,}\hlnum{24}\hlstd{,}\hlnum{19}\hlstd{,}\hlkwc{lower.tail} \hlstd{=} \hlnum{FALSE}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 2.114143
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+			Como $f > f_{0.01,24,19}$ é \textbf{FALSO falhamos em rejeitar }$\boldsymbol{H_{0}}$ com $\alpha = 0.05$
+			\end{enumerate}
+		\end{frame}
 	\section{Questão 6}
 	\section{Questão 7}
 	\section{Questão 8}
 \end{document}
+
 
 
 
