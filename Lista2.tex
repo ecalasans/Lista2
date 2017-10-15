@@ -216,7 +216,7 @@
 				\item $\alpha = 0.05$\\
 				Calculadndo $Z = \frac{\bar{x} - \mu_{0}}{s/\sqrt{n}} = \frac{1660-1690}{90/\sqrt{300}} = -5,77$\\
 				Conforme calculado em questão anterior:$$Z_{0.025} = -1.96 \hspace{0.5cm}Z_{0.975} = 1.96$$ 
-				Como $\lvert Z \rvert > \lvert Z_{\frac{\alpha}{2} \rvert}$ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.05}$  
+				Como $ Z > Z_{\frac{\alpha}{2}}$ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.05}$  
 			\end{enumerate}
 		\end{frame}
 		
@@ -224,7 +224,7 @@
 			\frametitle{Questão 3}
 			\begin{enumerate}[(b)]
 				\item $\alpha = 0.01$\\
-				Para o mesmo $Z = -5.77$ e $\lvert Z_{\frac{\alpha}{2}} \rvert = \lvert Z_{\frac{0.01}{2}} \rvert = \lvert Z_{0.005} \rvert$
+				Para o mesmo $Z = -5.77$ e $Z_{\frac{\alpha}{2}} \ = Z_{\frac{0.01}{2}} = Z_{0.005} $
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -235,15 +235,42 @@
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-			Como $\lvert Z \rvert > \lvert Z_{\frac{\alpha}{2} \rvert}$ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.01}$
+			Como $Z > Z_{\frac{\alpha}{2} }$ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.01}$
 			\end{enumerate}
 		\end{frame}
 	\section{Questão 4}
+	\begin{frame}[fragile]
+			\frametitle{Questão 4}
+			Sejam $n = 20, \bar{x} = 0.06$ e $s = 0.009$, deseja-se testar:
+			\begin{itemize}
+				\item $H_{0}:  \mu_{0} = 0.05pol$
+				\item $H_{1}:  \mu_{0} \neq 0.05pol$
+			\end{itemize}
+			Trata-se, portanto, de um \textbf{Teste t bicaudal}.  Para:
+			\begin{enumerate}[(a)]
+				\item $\alpha = 0.05$\\
+				Calculadndo $t = \frac{\bar{x} - \mu_{0}}{s/\sqrt{n}} = \frac{0.06 - 0.05}{0.009/\sqrt{20}} = 4.969$\\
+				Calculando $t_{\frac{\alpha}{2},19}$:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{qt}\hlstd{(}\hlnum{0.025}\hlstd{,}\hlnum{19}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] -2.093024
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+                        Como $t > t_{\frac{\alpha}{2}} $ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.05}$
+			\end{enumerate}
+		\end{frame}
 	\section{Questão 5}
 	\section{Questão 6}
 	\section{Questão 7}
 	\section{Questão 8}
 \end{document}
+
+
 
 
 
