@@ -132,13 +132,40 @@ round(qf(0.025,19,14),digits = 3)
 			\end{align*}
 		\end{enumerate}	
 	\end{frame}
+	
 	\section{Questão 3}
+	\begin{frame}
+			\frametitle{Questão 3}
+			Sejam $n = 300, \bar{x} = 1660$ e $s = 90h$, deseja-se testar:
+			\begin{itemize}
+				\item $H_{0}:  \mu_{0} = 1690h$
+				\item $H_{1}:  \mu_{0} \neq 1690h$
+			\end{itemize}
+			Trata-se, portanto, de um \textbf{Teste Z bicaudal}.  Para:
+			\begin{enumerate}[(a)]
+				\item $\alpha = 0.05$\\
+				Calculadndo $Z = \frac{\bar{x} - \mu_{0}}{s/\sqrt{n}} = \frac{1660-1690}{90/\sqrt{300}} = -5,77$\\
+				Conforme calculado em questão anterior:$$Z_{0.025} = -1.96 \hspace{0.5cm}Z_{0.975} = 1.96$$ 
+				Como $\lvert Z \rvert > \lvert Z_{\frac{\alpha}{2} \rvert}$ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.05}$  
+			\end{enumerate}
+		\end{frame}
+		
+		\begin{frame}[fragile]
+			\frametitle{Questão 3}
+			\begin{enumerate}[(b)]
+				\item $\alpha = 0.01$\\
+				Para o mesmo $Z = -5.77$ e $\lvert Z_{\frac{\alpha}{2}} \rvert = \lvert Z_{\frac{0.01}{2}} \rvert = \lvert Z_{0.005} \rvert$
+<<calcZQ3>>=
+qnorm(0.005)
+@	
+			Como $\lvert Z \rvert > \lvert Z_{\frac{\alpha}{2} \rvert}$ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.01}$
+			\end{enumerate}
+		\end{frame}
 	\section{Questão 4}
 	\section{Questão 5}
 	\section{Questão 6}
 	\section{Questão 7}
 	\section{Questão 8}
-
 \end{document}
 
 

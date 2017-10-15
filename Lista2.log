@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.10)  14 OCT 2017 22:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.10)  14 OCT 2017 23:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1003,19 +1003,16 @@ LaTeX Info: Redefining \textlatin on input line 1648.
 \l@brazilian = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeBe
-rkeley.sty
-(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/themes/outer/beamerouterth
-emesidebar.sty
-\beamer@sidebarwidth=\dimen193
-\beamer@headheight=\dimen194
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerth
-emerectangles.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/themes/theme/beamerthemeMa
+drid.sty
 (/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
 emewhale.sty)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
-emeorchid.sty))
+emeorchid.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerth
+emerounded.sty)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/themes/outer/beamerouterth
+emeinfolines.sty))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
@@ -1046,14 +1043,14 @@ LaTeX Font Info:    ... okay on input line 59.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(59.22636pt, 290.74263pt, 14.22636pt)
+* h-part:(L,W,R)=(10.95003pt, 342.2953pt, 10.95003pt)
 * v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
 * \paperwidth=364.19536pt
 * \paperheight=273.14662pt
-* \textwidth=290.74263pt
+* \textwidth=342.2953pt
 * \textheight=244.6939pt
-* \oddsidemargin=-13.04362pt
-* \evensidemargin=-13.04362pt
+* \oddsidemargin=-61.31996pt
+* \evensidemargin=-61.31996pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -1075,13 +1072,13 @@ LaTeX Font Info:    ... okay on input line 59.
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count155
-\scratchdimen=\dimen195
+\scratchdimen=\dimen193
 \scratchbox=\box53
 \nofMPsegments=\count156
 \nofMParguments=\count157
 \everyMPshowfont=\toks45
 \MPscratchCnt=\count158
-\MPscratchDim=\dimen196
+\MPscratchDim=\dimen194
 \MPnumerator=\count159
 \makeMPintoPDFobject=\count160
 \everyMPtoPDFconversion=\toks46
@@ -1200,12 +1197,7 @@ r-theorem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 LaTeX Info: Redefining \includegraphics on input line 59.
- (./Lista2.nav)
-
-Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 62.
-
-[1
+ (./Lista2.nav) [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for U+msa on input line 76.
@@ -1263,6 +1255,16 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 ] [11
 
 ]
+\openout4 = `Lista2.vrb'.
+
+ (./Lista2.vrb
+
+LaTeX Warning: The counter will not be printed.
+             The label is: (b) on input line 2.
+
+) [12
+
+]
 \tf@nav=\write6
 \openout6 = `Lista2.nav'.
 
@@ -1272,11 +1274,11 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 \tf@snm=\write8
 \openout8 = `Lista2.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 227.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 227.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 246.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 246.
  (./Lista2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 227.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 227.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 246.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 246.
 Package rerunfilecheck Info: File `Lista2.out' has not changed.
 (rerunfilecheck)             Checksum: 3BA968EB4634D60B50B550880AA3DB80;141.
 
@@ -1286,13 +1288,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 17959 strings out of 492995
- 338885 string characters out of 6132703
- 424823 words of memory out of 5000000
- 21030 multiletter control sequences out of 15000+600000
- 17749 words of font info for 55 fonts, out of 8000000 for 9000
+ 17970 strings out of 492995
+ 338660 string characters out of 6132703
+ 424947 words of memory out of 5000000
+ 21038 multiletter control sequences out of 15000+600000
+ 17443 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,16n,57p,837b,557s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,16n,55p,837b,604s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8.
@@ -1314,10 +1316,10 @@ b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></
 usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfso0800.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfso1000.pfb>
-Output written on Lista2.pdf (11 pages, 188644 bytes).
+Output written on Lista2.pdf (12 pages, 192102 bytes).
 PDF statistics:
- 439 PDF objects out of 1000 (max. 8388607)
- 396 compressed objects within 4 object streams
- 26 named destinations out of 1000 (max. 500000)
- 67 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 444 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
