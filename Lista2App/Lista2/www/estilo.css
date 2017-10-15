@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#container {
+	background-color: #FFF;
+	font-family: Verdana, Geneva, sans-serif;	
+}
+h1 {
+	font-size: 20px;
+	text-align: center;
+	line-height: 2px;
+}
+#modulo1 {
+	padding-top: 2em;
+	margin-bottom: 2em;
+	background-color: #C63;
+	margin-top: 5em;
+}
+#modulo2 {
+	padding-top: 2em;
+	background-color: #096;
+}
+.sidebar {
+	font-size: 16px;
+	color: #009;
+}

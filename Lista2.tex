@@ -1,0 +1,231 @@
+\documentclass{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+%\usepackage{alltt}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usetheme{Berkeley}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+	\title{Lista 2}
+	\subtitle{Tópicos Especiais em Engenharia de Computação}
+	\author{Eric Calasans de Barros \and  Fagner Ferreira}
+	
+	\begin{frame}[plain]
+		\maketitle
+	\end{frame}
+	
+	\section{Questão 1}
+		\begin{frame}
+			\frametitle{Questão 1}
+			Sejam $\bar{x}_{1} = 230,0 s_{1} = 10,7, \bar{x}_{2} = 225,5, s_{1} = 10,7 e s_{2} = 15,4$, para $\sigma_{1}^{2} = \sigma_{2}^{2}$, calcularemos um \textbf{intervalo de confiança(IC)} de 95\%($\alpha = 0.05$) para a diferença das médias $\mu_{1} - \mu_{2}$.  Se $$s = \frac{\sigma}{\sqrt{n}}$$
+			
+			então:
+			
+			$$Z = \frac{\bar{x} - \mu}{\sigma/\sqrt{n}} = \frac{\bar{x} - \mu}{s} \Rightarrow \mu = \bar{x} \pm Z*s$$
+		\end{frame}
+		\begin{frame}
+			\frametitle{Questão 1}
+			Dizer que a média está contida num determinado IC significa que $\mu = \bar{x} \pm Zs$.  Assim, para a diferença das médias temos que:
+				\begin{align*}
+					\mu_{1} - \mu_{2} &= (\bar{x}_{1} \pm Zs_{1}) - (\bar{x}_{2} \pm Zs_{2})\\
+					&= \bar{x}_{1} \pm  Zs_{1} - \bar{x}_{2} \pm Zs_{2}\\
+					&= (\bar{x}_{1} - \bar{x}_{2}) \pm Z(s_{1} - s_{2})
+				\end{align*}
+				
+				Como procuramos um IC bilateral temos que $\frac{\alpha}{2} = 0.025$.  Pela simetria da curva de distribuição Normal temos que $|Z_{\alpha}| = |Z_{1-\alpha}| \Rightarrow |Z_{0,025}| = |Z_{0,975}|$.  
+                \end{frame}
+                
+                \begin{frame}[fragile]
+                        \frametitle{Questão 1}
+                        Com a ajuda do software estatístico RStudio:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{qnorm}\hlstd{(}\hlnum{.975}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 1.959964
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+                        Assim temos:
+                        $$\mu_{1} - \mu_{2} = (230,0 - 225,5)\pm1,96(10,7-15,4) = 7,5\pm9,2$$
+
+                \end{frame}
+                
+    \section{Questão 2}
+    	\begin{frame}
+    		\frametitle{Questão 2}
+    		Sejam $n_{1} = 20, \bar{x}_{1} = 510, s^{2}_{1} = 20$ e $n_{2} = 15, \bar{x}_{2} = 620, s^{2}_{2} = 30$ com $\sigma_{1}^{2} \neq \sigma_{2}^{2}$., deseja-se calcular:\\
+    		\begin{enumerate}
+    			\item \textbf{{Um intervalo de confiança de 95\% para}} $\boldsymbol{\mu_{1} - \mu_{2}}$\\
+    			
+    			Como $n \leq 30$ em ambos os casos, usamos uma distribuição \textbf{t-Student}.  Assim, para $\sigma_{1}^{2} \neq \sigma_{2}^{2}$ temos que $$\mu_{1}-\mu_{2} = (\bar{x}_{1} - \bar{x}_{2}) \pm t_{df}\sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}$$
+    			
+    			onde $$d_{f} = \frac{(\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}})}{\frac{(\frac{s_{1}^{2}}{n_{1}})^2}{n_{1}-1} + \frac{(\frac{s_{2}^{2}}{n_{2}})^2}{n_{2}-1}} = \frac{(20/20 + 30/15)^2}{\frac{(20/20)^2}{19}+\frac{(30/15)^2}{14}} = 26$$ 
+    			
+    		\end{enumerate}
+    	\end{frame}
+    	
+    	\begin{frame}[fragile]
+    		\frametitle{Questão 2}
+    		\begin{enumerate}
+    			\item cont.$$\mu_{1} - \mu_{2} = (\bar{x}_1) - \bar{x}_2)\pm t_{0,975,26}\sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}$$
+    			
+    			Pelo \textbf{RStudio}:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{qt}\hlstd{(}\hlnum{.975}\hlstd{,}\hlnum{26}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 2.055529
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+    		\begin{align*}
+		        \mu_{1} - \mu_{2} &= (510 - 620) \pm 2,056\sqrt{\frac{20}{20} + \frac{30}{15}}\\
+			&= -110 \pm 3,561
+				\end{align*}
+    		\end{enumerate}
+    	\end{frame}
+    	
+    	\begin{frame}
+    		\frametitle{Questão 2}
+    		\begin{enumerate}
+    			\setcounter{enumi}{1}
+    			\item Dadas $\sigma_{1}^{2}$ e $\sigma_{2}^{2}$ as variânicas de duas V.A.s com distribuição normal e $s_{1}^2$ e $s_{2}^{2}$ as variâncias amostrais, define-se \textbf{F} com \textbf{distribuição F de Snedecom}:
+    		$$\boldsymbol{F = \frac{s^{2}_{1}/\sigma_{1}^{2}}{s^{2}_{2}/\sigma_{2}^{2}} = \frac{s^{2}_{1}}{s^{2}_{2}} \frac{\sigma_{2}^{2}}{\sigma_{1}^{2}}}$$ 
+    			para os graus de liberdade $df_{1} = m-1$ e $df_{2} = n-1$\\
+    			Para construir um IC a variável F deve obedecer à seguinte probabilidade:
+    			$$\boldsymbol{P(F_{\frac{\alpha}{2},df_{1},df_{2}} < F < F_{1-\frac{\alpha}{2},df_{1},df_{2}}) = 1 - \alpha}$$
+    		\end{enumerate}	
+    	\end{frame}
+    
+    	\begin{frame}
+	    	\frametitle{Questão 2}
+	    	\begin{enumerate}
+	    		\setcounter{enumi}{1}
+	    		\item \textit{cont.}\\
+	    			Para tanto:
+	    			\begin{align*}
+		    			F_{\frac{\alpha}{2},df_{1},df_{2}} < &\frac{s^{2}_{1}}{s^{2}_{2}} \frac{\sigma_{2}^{2}}{\sigma_{1}^{2}} < F_{1-\frac{\alpha}{2},df_{1},df_{2}}\\   
+		    			F_{\frac{\alpha}{2},df_{1},df_{2}} \frac{s^{2}_{2}}{s^{2}_{1}}< & \frac{\sigma_{2}^{2}}{\sigma_{1}^{2}} < F_{1-\frac{\alpha}{2},df_{1},df_{2}}\frac{s^{2}_{2}}{s^{2}_{1}}
+	    			\end{align*}
+	    			Invertendo os termos:$$\boldsymbol{\frac{1}{F_{1-\frac{\alpha}{2},df_{1},df_{2}}}\frac{s^{2}_{2}}{s^{2}_{1}} < \frac{\sigma_{1}^{2}}{\sigma_{2}^{2}} < \frac{1}{F_{\frac{\alpha}{2},df_{1},df_{2}}}\frac{s^{2}_{2}}{s^{2}_{1}}}$$
+	    	\end{enumerate}	
+    \end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Questão 2}
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+			\item \textit{cont.}\\
+			Substituindo os valores:\\
+			$$\frac{1}{F_{0.975,19,14}}\frac{20}{30} < \frac{\sigma_{1}^{2}}{\sigma_{2}^{2}} < \frac{1}{F_{0.975,19,14}}\frac{20}{30}$$
+			Utilizando o \textbf{RStudio} e a propriedade da distribuição F:$$F_{\frac{\alpha}{2},df_{1},df_{2}} = \frac{1}{F_{1-\frac{\alpha}{2},df_{1},df_{2}}}$$
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{round}\hlstd{(}\hlkwd{qf}\hlstd{(}\hlnum{0.025}\hlstd{,}\hlnum{19}\hlstd{,}\hlnum{14}\hlstd{),}\hlkwc{digits} \hlstd{=} \hlnum{3}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.378
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+			
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Questão 2}
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+			\item \textit{cont.}\\
+			$$F_{0.975,19,14} = \frac{1}{F_{0.025,19,14}} = \frac{1}{0.378} = 2.645$$
+			
+			Logo:
+			\begin{align*}
+				\frac{1}{2.645}\frac{20}{30} < &\frac{\sigma_{1}^{2}}{\sigma_{2}^{2}} < \frac{1}{0.378}\frac{20}{30}\\ 0.251 < &\frac{\sigma_{1}^{2}}{\sigma_{2}^{2}} < 1.754
+			\end{align*}
+		\end{enumerate}	
+	\end{frame}
+
+	\section{Questão 3}
+		\begin{frame}
+			\frametitle{Questão 3}
+			Sejam $n = 300, \bar{x} = 1660$ e $s = 90h$, deseja-se testar:
+			\begin{itemize}
+				\item $H_{0}:  \mu_{0} = 1690h$
+				\item $H_{1}:  \mu_{0} \neq 1690h$
+			\end{itemize}
+			Trata-se, portanto, de um \textbf{Teste Z bicaudal}.  Para:
+			\begin{enumerate}[(a)]
+				\item $\alpha = 0.05$\\
+				Calculadndo $Z = \frac{\bar{x} - \mu_{0}}{s/\sqrt{n}} = \frac{1660-1690}{90/\sqrt{300}} = -5,77$
+				\item
+			\end{enumerate}
+		\end{frame}
+	\section{Questão 4}
+	\section{Questão 5}
+	\section{Questão 6}
+	\section{Questão 7}
+	\section{Questão 8}
+
+\end{document}
+
+
+
+

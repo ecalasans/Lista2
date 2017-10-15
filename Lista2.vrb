@@ -1,0 +1,19 @@
+\frametitle{Questão 2}
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+			\item \textit{cont.}\\
+			Substituindo os valores:\\
+			$$\frac{1}{F_{0.975,19,14}}\frac{20}{30} < \frac{\sigma_{1}^{2}}{\sigma_{2}^{2}} < \frac{1}{F_{0.975,19,14}}\frac{20}{30}$$
+			Utilizando o \textbf{RStudio} e a propriedade da distribuição F:$$F_{\frac{\alpha}{2},df_{1},df_{2}} = \frac{1}{F_{1-\frac{\alpha}{2},df_{1},df_{2}}}$$
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{round}\hlstd{(}\hlkwd{qf}\hlstd{(}\hlnum{0.025}\hlstd{,}\hlnum{19}\hlstd{,}\hlnum{14}\hlstd{),}\hlkwc{digits} \hlstd{=} \hlnum{3}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.378
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+		\end{enumerate}

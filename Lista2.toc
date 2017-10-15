@@ -1,0 +1,4 @@
+\select@language {brazilian}
+\beamer@sectionintoc {1}{Quest\IeC {\~a}o 1}{2}{0}{1}
+\beamer@sectionintoc {2}{Quest\IeC {\~a}o 2}{5}{0}{2}
+\beamer@sectionintoc {3}{Quest\IeC {\~a}o 3}{11}{0}{3}

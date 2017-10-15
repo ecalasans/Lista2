@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(ggplot2)\nlibrary(scales)\n\nmedia <- 10\ndesvio <- 3.8\nn <- 40\nalfa <- 0.05\n\nic <- media + c(-1,1) * qnorm(1-(alfa/2)) *(desvio/sqrt(n))\n\nx <- c(-3,3)\ny <- dnorm(x)\nlInf <- ic[1]\nlSup <- ic[2]\n\nzinf <- qnorm(alfa/2)\nzsup <- qnorm(1-alfa/2)\n\nxy <- data.frame(x = x, y = y)\n\ng <- ggplot(data = data.frame(x), aes(x=x))\n\ng <- g + stat_function(fun = dnorm, n = 10000, args = list(mean = 0, sd = 1))\n                       \n\n g <- g + geom_segment(data = xy, aes(x = zinf, y = 0, xend = zinf, yend = dnorm(zinf)))\n \n g <- g + geom_label(aes(x=zinf,y=0), label = toString(round(lInf,2)))\n \n g <- g + geom_label(aes(x=zsup,y=0), label = toString(round(lSup,2)))\n \n  \n g <- g + geom_segment(data = xy, aes(x = zsup, y = 0, xend = zsup, yend = dnorm(zsup)))\n  \n g <- g + scale_y_continuous(breaks = NULL) + ylab(\"\") + \n          scale_x_continuous(breaks = NULL) + xlab(paste(\"Intervalo de Confiança de\", \n                                                         toString(percent((1-alfa)))))\n  \n g <- g + stat_function(fun= dnorm, n = 10000, args = list(0,1),\n                         geom = \"area\", xlim = c(zinf,zsup), fill = \"red\", alpha = 0.5)\n \n\n\n",
+    "created" : 1507489887718.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4233582117",
+    "id" : "C849AF6E",
+    "lastKnownWriteTime" : 1507479905,
+    "last_content_update" : 1507479905,
+    "path" : "~/Dropbox/Estudos/R/EstudosGerais/ic.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

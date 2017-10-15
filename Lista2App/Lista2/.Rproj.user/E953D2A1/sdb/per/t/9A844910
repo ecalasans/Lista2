@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(scales)\n\n\nnormalCurve <- function(xbarra, variancia, n, ic){\n        alfa <- (100-ic)/100\n        intervaloMediaN <- xbarra + c(-1,1)*qnorm(1-(alfa/2))*(sqrt(variancia/n))\n}\n\ntsCurve <- function(xbarra, variancia, n, ic){\n        alfa <- (100-ic)/100\n        intervaloMediaT <- xbarra + c(-1,1)*qt(1-(alfa/2),df = n-1)*(sqrt(variancia/n))\n}\n\nquiCurve <- function(variancia, n, ic){\n        alfa <- (100-ic)/100\n        limSup <- (n-1)*variancia/qchisq((alfa/2),df = n-1)\n        limInf <- (n-1)*variancia/qchisq(1-(alfa/2),df = n-1)\n        intervaloVarChi <- c(limInf,limSup)\n}\n\nfCurve <- function(n1, s1, n2, s2, ic){\n        alfa <- (100 - ic)/100\n        \n        limSup <- (s1/s2)/qf((alfa/2),df1 = (n1-1),df2 = (n2-1))\n        limInf <- (s1/s2)/qf(1-(alfa/2),df1 = (n1-1),df2 = (n2-1))\n        \n        intervaloRVarF <- c(limInf,limSup)\n}",
+    "created" : 1507488420179.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "195649387",
+    "id" : "9A844910",
+    "lastKnownWriteTime" : 1507621396,
+    "last_content_update" : 1507621396242,
+    "path" : "~/Dropbox/UFRN/2017.2/TOPICOS/Lista2/Lista2App/Lista2/funcoes.R",
+    "project_path" : "funcoes.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
