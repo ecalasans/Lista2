@@ -59,7 +59,7 @@
 \begin{document}
 	\title{Lista 2}
 	\subtitle{Tópicos Especiais em Engenharia de Computação}
-	%\author{Eric Calasans de Barros \and  Fagner Ferreira}
+	\author{Eric Calasans de Barros \and  Fagner Ferreira}
 	
 	\begin{frame}[plain]
 		\maketitle
@@ -367,6 +367,111 @@
 				\end{bmatrix}
 			\end{align*}
 			onde $\sigma_{12}$ é a covariância entre $x_{1}$ e $x_{2}$.
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Questão 8}
+			Como $x_{1}$ e $x_{2}$ são V.A. independentes, $\sigma_{12} = \sigma_{21} = 0$.  Assim:
+			$$\boldsymbol{C} = \begin{bmatrix}
+				\sigma_{1}^{2}&0\\0&\sigma_{2}^{2}
+			\end{bmatrix}$$
+			$$\boldsymbol{C^{-1}} =
+			\begin{bmatrix}
+				\frac{1}{\sigma_{1}^{2}}&0\\0&\frac{1}{\sigma_{2}^{2}}
+			\end{bmatrix}$$
+			Para esboçar o gráfico de distribuição dos dados no plano $x_{1}x_{2}$ devemos calcular o valor de $(\boldsymbol{x} - \boldsymbol{\mu_{i}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{i}})$ para algum valor de $k$ constante.  Assim:$$(\boldsymbol{x} - \boldsymbol{\mu_{i}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{i}}) = k$$
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{Questão 8}
+			Tomando $\boldsymbol{\mu_{1}} = [-1~~0]^{T}$,  $\boldsymbol{x} = [x_{1}~~ x_{2}]$ e $k = 1$:
+			$$
+				[x_{1} + 1 ~~ x_{2}]
+				\begin{bmatrix}
+				\frac{1}{\sigma_{1}^{2}}&0\\0&\frac{1}{\sigma_{2}^{2}}
+				\end{bmatrix}
+				\begin{bmatrix}
+					x_{1} + 1 \\ x_{2}
+				\end{bmatrix} = 1$$
+				$$\frac{(x_{1} + 1)^{2}}{\sigma_{1}^{2}} + \frac{x_{2}^{2}}{\sigma_{2}^{2}} = 1$$
+				A equação acima mostra que o gráfico é uma elipse no plano $x_{1}x_{2}$.  Para o caso em questão com variâncias iguais:
+				$$\boldsymbol{C} = 0.5\begin{bmatrix}
+					1&0\\0&1
+				\end{bmatrix} = 
+				\begin{bmatrix}
+					0.5&0\\0&0.5
+				\end{bmatrix}$$
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Questão 8}
+			Logo:
+			$$\frac{(x_{1} + 1)^{2}}{0.5} + \frac{x_{2}^{2}}{0.5} = 1$$
+			$$[x_{1} + 1]^{2} + x_{2}^{2} = 0.5$$
+			$$[x_{1} - (-1)]^{2} + (x_{2} - 0)^{2} = 0.5$$
+			Para variâncias iguais a equação se transforma numa equação de um círculo  de centro [-1,0] e raio 0.5.  O mesmo raciocínio vale para $\boldsymbol{\mu_{2}} = [1~~0]^{T}$, onde encontramos o centro do círculo em [1,0].\\
+			
+			Generalizando para a questão:
+			$$\forall k > 0,~ \exists[(x_{1},x_{2}) \in \boldsymbol{x}, ~(\mu_{1},\mu_{2}) \in \boldsymbol{\mu}] \rightarrow (x_{1} - \mu_{1})^{2} + (x_{2} - \mu_{2})^2 = k,$$ 
+			onde $k = \sigma^{2}$.
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Questão 8}
+			Com o auxílio do MATLAB, plotamos os gráficos para $\boldsymbol{\mu_{1}}$ e $\boldsymbol{\mu_{2}}$:
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.3]{lista2_1.jpeg}
+				\caption{$\boldsymbol{\mu_{1}}$}
+			\end{figure}
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{Questão 8}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.3]{lista2_2.jpeg}
+				\caption{$\boldsymbol{\mu_{2}}$}
+			\end{figure}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Questão 8}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.3]{lista2_3.jpeg}
+				\caption{$\boldsymbol{\mu_{2}}$ e $\boldsymbol{\mu_{2}}$}
+			\end{figure}
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{Questão 8}
+			Calculando a função de \textbf{Máxima Verossimilhança(ML)} $\Lambda_{ML}(x)$:
+			$$\Lambda_{ML}(x) = \frac{f(\boldsymbol{x}|C_{2})}{f(\boldsymbol{x}|C_{1})} \overset{C_{2}}{>} \underset{C_{1}}{<} \frac{f(C_{1})}{f(C_{2})}$$
+			Tomando $C_{1}$ e $C_{2}$ como equiprováveis temos:
+			$\Lambda_{ML}(x)$:
+			$$\Lambda_{ML}(x) = \frac{f(\boldsymbol{x}|C_{2})}{f(\boldsymbol{x}|C_{1})} \overset{C_{2}}{>} \underset{C_{1}}{<} 1$$
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Questão 8}
+			Assim:
+			\begin{align*}
+				\Lambda_{ML}(x) &= \frac{\frac{1}{(2\pi)^{D/2}det(\boldsymbol{C})^{1/2}}exp(-\frac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu_{2}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{2}}))}{\frac{1}{(2\pi)^{D/2}det(\boldsymbol{C})^{1/2}}exp(-\frac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu_{1}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{1}}))}\overset{C_{2}}{>} \underset{C_{1}}{<} 1\\
+				\\
+				&= \frac{exp(-\frac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu_{2}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{2}}))}{exp(-\frac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu_{1}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{1}}))}\overset{C_{2}}{>} \underset{C_{1}}{<} 1\\
+				\\
+				&=exp(-\frac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu_{2}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{2}}) + \frac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu_{1}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{1}}))\\
+				\Lambda_{ML}(x) &= exp-\frac{1}{2}\{(\boldsymbol{x} - \boldsymbol{\mu_{2}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{2}}) - [(\boldsymbol{x} - \boldsymbol{\mu_{1}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{1}})]\}
+			\end{align*}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Questão 8}
+			Calculando o \textbf{logaritmo de Verossimilhança} $\delta_{ML}(\Lambda_{ML}(x))$:
+			\begin{align*}
+				\ln[\Lambda_{ML}(x)] &= \ln{e^{-\frac{1}{2}\{(\boldsymbol{x} - \boldsymbol{\mu_{2}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{2}}) - [(\boldsymbol{x} - \boldsymbol{\mu_{1}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{1}})]\}}} 
+			\end{align*}
 		\end{frame}
 \end{document}
 

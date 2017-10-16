@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.10)  15 OCT 2017 23:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.10)  16 OCT 2017 06:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1197,7 +1197,12 @@ r-theorem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 LaTeX Info: Redefining \includegraphics on input line 59.
- (./Lista2.nav) [1
+ (./Lista2.nav)
+
+Package hyperref Warning: Option `pdfauthor' has already been used,
+(hyperref)                setting the option has no effect on input line 62.
+
+[1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for U+msa on input line 76.
@@ -1316,6 +1321,46 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
 
 ] [19
 
+] [20
+
+] [21
+
+] [22
+
+]
+<lista2_1.jpeg, id=657, 630.355pt x 575.14874pt>
+File: lista2_1.jpeg Graphic file (type jpg)
+ <use lista2_1.jpeg>
+Package pdftex.def Info: lista2_1.jpeg used on input line 427.
+(pdftex.def)             Requested size: 189.10796pt x 172.54594pt.
+
+Overfull \vbox (0.74898pt too high) detected at line 427
+ []
+
+[23
+
+ <./lista2_1.jpeg>] <lista2_2.jpeg, id=685, 686.565pt x 612.2875pt>
+File: lista2_2.jpeg Graphic file (type jpg)
+
+<use lista2_2.jpeg>
+Package pdftex.def Info: lista2_2.jpeg used on input line 436.
+(pdftex.def)             Requested size: 205.97108pt x 183.68767pt.
+ [24
+
+ <./lista2_2.jpeg>]
+<lista2_3.jpeg, id=712, 799.98875pt x 603.25375pt>
+File: lista2_3.jpeg Graphic file (type jpg)
+ <use lista2_3.jpeg>
+Package pdftex.def Info: lista2_3.jpeg used on input line 445.
+(pdftex.def)             Requested size: 239.99847pt x 180.97751pt.
+ [25
+
+ <./lista2_3.jpeg>] [26
+
+] [27
+
+] [28
+
 ]
 \tf@nav=\write6
 \openout6 = `Lista2.nav'.
@@ -1326,11 +1371,11 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
 \tf@snm=\write8
 \openout8 = `Lista2.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 371.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 371.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 476.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 476.
  (./Lista2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 371.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 371.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 476.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 476.
 Package rerunfilecheck Info: File `Lista2.out' has not changed.
 (rerunfilecheck)             Checksum: 625B7F18D7AB3EAEDD6D4A1E2204BAD1;376.
 
@@ -1343,11 +1388,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 18023 strings out of 492995
- 339001 string characters out of 6132703
- 425947 words of memory out of 5000000
- 21066 multiletter control sequences out of 15000+600000
- 17443 words of font info for 54 fonts, out of 8000000 for 9000
+ 18129 strings out of 492995
+ 340517 string characters out of 6132703
+ 426946 words of memory out of 5000000
+ 21144 multiletter control sequences out of 15000+600000
+ 25812 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,57p,837b,559s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -1367,14 +1412,15 @@ b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.p
 fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.p
 fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pf
 b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfso0800.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfso1000.pfb>
-Output written on Lista2.pdf (19 pages, 227143 bytes).
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfso0800.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfso1000.pfb>
+Output written on Lista2.pdf (28 pages, 602293 bytes).
 PDF statistics:
- 655 PDF objects out of 1000 (max. 8388607)
- 597 compressed objects within 6 object streams
- 47 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 903 PDF objects out of 1000 (max. 8388607)
+ 829 compressed objects within 9 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
