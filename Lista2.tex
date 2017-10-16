@@ -54,7 +54,10 @@
 \usepackage[brazilian]{babel}
 \usepackage{amsmath}
 \usepackage{enumerate}
+\usepackage{cancel}%para usar o cancelamento
 \usetheme{Madrid}
+
+\renewcommand{\CancelColor}{\color{red}}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 	\title{Lista 2}
@@ -327,6 +330,69 @@
 	\section{Questão 6}
 		\begin{frame}
 			\frametitle{Questão 6}
+			Seja a X uma V.A. com distribuição normal $N(\mu,\sigma^{2})$ cuja fdp é dada por:$$f(x) = \frac{1}{\sqrt{2\pi\sigma^{2}}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}$$para $-\infty < x < \infty$.  A \textbf{função de verossimilhança L} é dada por:
+			$$L(\mu,\sigma^{2};x_{1},\dots,x_{n}) = \prod_{i=1}^{n} \frac{1}{\sqrt{2\pi\sigma^{2}}}e^{-\frac{(x_{i}-\mu)^{2}}{2\sigma^{2}}}$$ ou $$L(\mu,\sigma^{2};x_{1},\dots,x_{n}) = (2\pi)^{-n/2}(\sigma^{2})^{-n/2}e^{-\frac{1}{2}\sum_{i=1}^{n}\frac{(x_{i}-\mu)^{2}}{2\sigma^{2}}}$$
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{Questão 6}
+			Para encontrar o estimador de máxima verossimilhança devemos achar os valores para os quais $L(\mu,\sigma^{2};x_{1},\dots,x_{n})$ é \textbf{máxima}.  Inicialmente aplicamos a função $\boldsymbol{ln}$:
+			$$\ln[L(\mu,\sigma^{2};x_{1},\dots,x_{n})] = -\frac{n}{2}\ln(2\pi)-\frac{n}{2}\ln(\sigma^{2})-\frac{1}{2}\sum_{i=1}^{n}\frac{(x_{i}-\mu)^{2}}{\sigma^{2}}$$
+			A seguir calculamos a derivada parcial em relação a $\mu$
+			\begin{align*}
+				\frac{\partial  [ \ln L(\mu,\sigma^{2};x_{1},\dots,x_{n})]}{\partial \mu} &= -\frac{2}{2\sigma^{2}}\sum_{i=1}^{n}(x_{i} - \mu)(-1)\\
+				&= \sum_{i=1}^{n}\frac{(x_{i}-\mu)}{\sigma^{2}}
+			\end{align*}
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{Questão 6}
+			Igualando o resultado a zero obtemos:
+			\begin{align*}
+				\sum_{i=1}^{n}\frac{(x_{i}-\hat{\mu})}{\sigma^{2}} &= 0\\
+				\frac{1}{\sigma^{2}}\sum_{i=1}^{n}(x_{i}-\hat{\mu}) &= 0\\
+				\sum_{i=1}^{n}(x_{i}-\hat{\mu}) &= 0\\
+				\sum_{i=1}^{n}x_{i} = n\hat{\mu}\\
+				\hat{\mu} = \frac{\sum_{i=1}^{n}x_{i}}{n} = \bar{x}	 			
+			\end{align*}
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{Questão 6}
+			Dessa forma, é possível que o estimador de máxima verossimilhança para a média populacional seja $\bar{x}$.  Isto é confirmado se $\bar{x}$ for considerado um ponto de máximo.  Para isto:
+			\begin{align*}
+				\frac{\partial^{2}[ \ln   L(\mu,\sigma^{2};x_{1},\dots,x_{n})]}{\partial \mu^{2}} &= \frac{\partial^{2}}{\partial \mu^{2}} \bigg[ \frac{1}{\sigma^{2}}\sum_{i=1}^{n}(x_{i}-\hat{\mu})\bigg]\\
+				&= -\frac{n}{\sigma^{2}} < 0
+			\end{align*}
+			Concluímos então que $\bar{x}$ é realmente um ponto de máximo e, por consequência, o estimador de máxima verossimilhança para $\mu$.
+		\end{frame}
+	
+		\begin{frame}{Questão 6}
+			Desejamos calcular agora o estimador de máxima verossimilhança para a variância $\sigma^{2}$.  Para tanto, derivamos a função $\ln L[\cdot]$ em relação a $\sigma^{2}$:
+			$$\frac{\partial  [ \ln L(\mu,\sigma^{2};x_{1},\dots,x_{n})]}{\partial \sigma^{2}} = -\frac{n}{2\sigma^{2}}+\frac{1}{2}\sum_{i=1}^{n}\bigg(\frac{x_{i}-\mu}{\sigma^{2}}\bigg)^{2}$$
+			Igualando a zero:
+			\begin{align*}
+				-\frac{n}{2\sigma^{2}}+\frac{1}{2}\sum_{i=1}^{n}\bigg(\frac{x_{i}-\mu}{\sigma^{2}}\bigg)^{2} &= 0\\
+				\frac{1}{2}\bigg[ -\frac{n}{\sigma^{2}} + \frac{1}{\sigma^{4}}\sum_{i=1}^{n}(x_{i}-\mu)^{2}\bigg] &= 0 
+			\end{align*}
+		\end{frame}
+		
+		\begin{frame}{Questão 6}
+			\begin{align*}
+				\frac{n}{\sigma^{2}} &= \frac{1}{\sigma^{4}}\sum_{i=1}^{n}(x_{i}-\mu)^{2}\\
+				\sigma^{2} &= \frac{\sum_{i=1}^{n}(x_{i}-\mu)^{2}}{n}				
+			\end{align*}
+			Multiplicando o segundo termo por $\frac{n-1}{n-1}$:
+			\begin{align*}
+			\sigma^{2} &= \frac{\sum_{i=1}^{n}(x_{i}-\mu)^{2}}{n} \cdot \frac{n-1}{n-1}\\
+			\sigma^{2} &= \frac{n-1}{n}s^{2}\\				
+			\end{align*}
+		\end{frame}
+	
+		\begin{frame}{Questão 6}
+			Dessa forma, é possível que o estimador de máxima verossimilhança para a variância populacional seja $ \frac{n-1}{n}s^{2}$.  Isto é confirmado se $ \frac{n-1}{n}s^{2}$ for considerado um ponto de máximo.  Para isto:
+			$$\frac{\partial^{2}[ \ln   L(\mu,\sigma^{2};x_{1},\dots,x_{n})]}{\partial \mu^{2}}  = -\frac{n}{2\sigma^2} < 0 $$
+			Portanto, o estimador de máxima verossimilhança para a $\sigma^{2}$ é $frac{n-1}{n}s^{2}$.
 		\end{frame}
 	\section{Questão 7}
 	\section{Questão 8}
@@ -470,8 +536,44 @@
 			\frametitle{Questão 8}
 			Calculando o \textbf{logaritmo de Verossimilhança} $\delta_{ML}(\Lambda_{ML}(x))$:
 			\begin{align*}
-				\ln[\Lambda_{ML}(x)] &= \ln{e^{-\frac{1}{2}\{(\boldsymbol{x} - \boldsymbol{\mu_{2}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{2}}) - [(\boldsymbol{x} - \boldsymbol{\mu_{1}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{1}})]\}}} 
+				\ln[\Lambda_{ML}(x)] &= \ln{e^{-\frac{1}{2}\{(\boldsymbol{x} - \boldsymbol{\mu_{2}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{2}}) - [(\boldsymbol{x} - \boldsymbol{\mu_{1}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{1}})]\}}}\\
+				&= -\frac{1}{2}\{(\boldsymbol{x} - \boldsymbol{\mu_{2}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{2}}) - [(\boldsymbol{x} - \boldsymbol{\mu_{1}})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu_{1}})]\}\\
 			\end{align*}
+			Expandindo os produtos:
+			\begin{align*}
+				\delta_{ML}(\Lambda_{ML}(x)= &-\frac{1}{2}\{ \boldsymbol{x}^{T}\boldsymbol{C}^{-1}\boldsymbol{x} - \boldsymbol{x}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{2}} - \boldsymbol{\mu_{2}}^{T}\boldsymbol{C}^{-1}\boldsymbol{x} - 
+				\boldsymbol{\mu_{2}}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{2}}\\
+				&-[\boldsymbol{x}^{T}\boldsymbol{C}^{-1}\boldsymbol{x} - 
+				\boldsymbol{x}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{1}} - 
+				\boldsymbol{\mu_{1}}^{T}\boldsymbol{C}^{-1}\boldsymbol{x} + 
+				\boldsymbol{\mu_{1}}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{1}}]\}
+			\end{align*}
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{Questão 8}
+			\begin{align*}
+				\delta_{ML}(\Lambda_{ML}(x)= &-\frac{1}{2}\{ \cancel{\boldsymbol{x}^{T}\boldsymbol{C}^{-1}\boldsymbol{x}} - \boldsymbol{x}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{2}} - \boldsymbol{\mu_{2}}^{T}\boldsymbol{C}^{-1}\boldsymbol{x} + 
+				\boldsymbol{\mu_{2}}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{2}}\\
+				&\cancel{-\boldsymbol{x}^{T}\boldsymbol{C}^{-1}\boldsymbol{x}} + 
+				\boldsymbol{x}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{1}} + 
+				\boldsymbol{\mu_{1}}^{T}\boldsymbol{C}^{-1}\boldsymbol{x} - 
+				\boldsymbol{\mu_{1}}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{1}}\}\\
+				=&-\frac{1}{\cancel{2}}\{ -\cancel{2}\boldsymbol{\mu_{2}}^{T}\boldsymbol{C}^{-1}\boldsymbol{x}
+				+ \cancel{2}\boldsymbol{\mu_{1}}^{T}\boldsymbol{C}^{-1}\boldsymbol{x}\ - 
+			    [\boldsymbol{\mu_{1}}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{1}}\\ &- 
+			    \boldsymbol{\mu_{2}}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{2}}]\}\\
+			    =&\boldsymbol{\mu_{2}}^{T}\boldsymbol{C}^{-1}\boldsymbol{x} - \boldsymbol{\mu_{1}}^{T}\boldsymbol{C}^{-1}\boldsymbol{x} + \frac{1}{2}[\boldsymbol{\mu_{1}}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{1}}\\ &- 
+			    \boldsymbol{\mu_{2}}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{2}}]\\
+			    =&(\boldsymbol{\mu_{2}}^{T}\boldsymbol{C}^{-1} - \boldsymbol{\mu_{1}}^{T}\boldsymbol{C}^{-1})\boldsymbol{x}+\frac{1}{2}[\boldsymbol{\mu_{1}}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{1}} - \boldsymbol{\mu_{2}}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{2}}]
+			\end{align*}
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{Questão 8}
+			Fazendo: $$\boldsymbol{w^{T}} = (\boldsymbol{\mu_{2}}^{T}\boldsymbol{C}^{-1} - \boldsymbol{\mu_{1}}^{T}\boldsymbol{C}^{-1})$$ e: $$\boldsymbol{w_{0}} = \frac{1}{2}[\boldsymbol{\mu_{1}}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{1}} - \boldsymbol{\mu_{2}}^{T}\boldsymbol{C}^{-1}\boldsymbol{\mu_{2}}]$$ temos:
+			$$\ln[\Lambda_{ML}(x)] = \boldsymbol{w^{T}}\boldsymbol{x} + \boldsymbol{w_{0}}$$
+			o que, pela linearidade em $\boldsymbol{x}$ da nova equação, configura a equação de um \textbf{hiperplano}.
 		\end{frame}
 \end{document}
 
