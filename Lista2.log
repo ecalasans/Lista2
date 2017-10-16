@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.10)  16 OCT 2017 16:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.10)  16 OCT 2017 16:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1023,20 +1023,20 @@ tim
 (./Lista2.aux)
 \openout1 = `Lista2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1104,7 +1104,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 62.
+Package hyperref Info: Link coloring OFF on input line 63.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1114,66 +1114,66 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count161
 )
-LaTeX Info: Redefining \ref on input line 62.
-LaTeX Info: Redefining \pageref on input line 62.
-LaTeX Info: Redefining \nameref on input line 62.
+LaTeX Info: Redefining \ref on input line 63.
+LaTeX Info: Redefining \pageref on input line 63.
+LaTeX Info: Redefining \nameref on input line 63.
 
 (./Lista2.out) (./Lista2.out)
 \@outlinefile=\write5
 \openout5 = `Lista2.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 62.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 63.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 62.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 63.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 62.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 63.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 62.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 63.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 62.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 62.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 63.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 63.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 62.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 63.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 62.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 62.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 63.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 63.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 62.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 63.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 62.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 62.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 63.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 63.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 62.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 63.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 62.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 63.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 62.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 63.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 62.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 63.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 62.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 63.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 62.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 63.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 62.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 63.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 62.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 63.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 62.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 62.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 63.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 63.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 6
-2.
+3.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 
-62.
+63.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 62.
+ut line 63.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/translator/dicts/translato
 r-basic-dictionary/translator-basic-dictionary-English.dict
@@ -1199,27 +1199,27 @@ Dictionary: translator-numbers-dictionary, Language: English
 r-theorem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 62.
+LaTeX Info: Redefining \includegraphics on input line 63.
  (./Lista2.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 65.
+(hyperref)                setting the option has no effect on input line 66.
 
 [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for U+msa on input line 79.
+LaTeX Font Info:    Try loading font information for U+msa on input line 80.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 79.
+LaTeX Font Info:    Try loading font information for U+msb on input line 80.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 79.
+line 80.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
@@ -1227,7 +1227,7 @@ thkerncmss.
 )
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 79.
+(Font)              size <5> substituted on input line 80.
 
 [2
 
@@ -1251,14 +1251,14 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 ]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: b) on input line 156.
+             The label is: b) on input line 157.
 
 [7
 
 ]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: b) on input line 169.
+             The label is: b) on input line 170.
 
 [8
 
@@ -1275,7 +1275,7 @@ LaTeX Warning: The counter will not be printed.
 ]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: b) on input line 203.
+             The label is: b) on input line 204.
 
 [10
 
@@ -1309,7 +1309,7 @@ LaTeX Warning: The counter will not be printed.
 ]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 297.
+(Font)              using `OT1/cmss/bx/n' instead on input line 298.
 
 [15
 
@@ -1343,42 +1343,45 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
 
 ] [28
 
-] <lista2_1.jpeg, id=818, 630.355pt x 575.14874pt>
+] [29
+
+] <lista2_1.jpeg, id=844, 630.355pt x 575.14874pt>
 File: lista2_1.jpeg Graphic file (type jpg)
- <use lista2_1.jpeg>
-Package pdftex.def Info: lista2_1.jpeg used on input line 492.
+
+<use lista2_1.jpeg>
+Package pdftex.def Info: lista2_1.jpeg used on input line 506.
 (pdftex.def)             Requested size: 189.10796pt x 172.54594pt.
 
-Overfull \vbox (0.74898pt too high) detected at line 492
+Overfull \vbox (0.74898pt too high) detected at line 506
  []
 
-[29
+[30
 
- <./lista2_1.jpeg>] <lista2_2.jpeg, id=845, 686.565pt x 612.2875pt>
+ <./lista2_1.jpeg>] <lista2_2.jpeg, id=871, 686.565pt x 612.2875pt>
 File: lista2_2.jpeg Graphic file (type jpg)
 
 <use lista2_2.jpeg>
-Package pdftex.def Info: lista2_2.jpeg used on input line 501.
+Package pdftex.def Info: lista2_2.jpeg used on input line 515.
 (pdftex.def)             Requested size: 205.97108pt x 183.68767pt.
- [30
-
- <./lista2_2.jpeg>]
-<lista2_3.jpeg, id=872, 799.98875pt x 603.25375pt>
-File: lista2_3.jpeg Graphic file (type jpg)
- <use lista2_3.jpeg>
-Package pdftex.def Info: lista2_3.jpeg used on input line 510.
-(pdftex.def)             Requested size: 239.99847pt x 180.97751pt.
  [31
 
- <./lista2_3.jpeg>] [32
+ <./lista2_2.jpeg>]
+<lista2_3.jpeg, id=900, 799.98875pt x 603.25375pt>
+File: lista2_3.jpeg Graphic file (type jpg)
+ <use lista2_3.jpeg>
+Package pdftex.def Info: lista2_3.jpeg used on input line 524.
+(pdftex.def)             Requested size: 239.99847pt x 180.97751pt.
+ [32
 
-] [33
+ <./lista2_3.jpeg>] [33
 
 ] [34
 
 ] [35
 
 ] [36
+
+] [37
 
 ]
 \tf@nav=\write6
@@ -1390,11 +1393,11 @@ Package pdftex.def Info: lista2_3.jpeg used on input line 510.
 \tf@snm=\write8
 \openout8 = `Lista2.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 577.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 577.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 591.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 591.
  (./Lista2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 577.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 577.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 591.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 591.
 Package rerunfilecheck Info: File `Lista2.out' has not changed.
 (rerunfilecheck)             Checksum: 625B7F18D7AB3EAEDD6D4A1E2204BAD1;376.
 
@@ -1407,10 +1410,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 18191 strings out of 492995
- 341246 string characters out of 6132703
+ 18195 strings out of 492995
+ 341283 string characters out of 6132703
  430810 words of memory out of 5000000
- 21186 multiletter control sequences out of 15000+600000
+ 21188 multiletter control sequences out of 15000+600000
  25812 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,20n,57p,837b,559s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1439,10 +1442,10 @@ b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfso0800.pf
 b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfso1000.pfb>
 
-Output written on Lista2.pdf (36 pages, 635298 bytes).
+Output written on Lista2.pdf (37 pages, 640034 bytes).
 PDF statistics:
- 1126 PDF objects out of 1200 (max. 8388607)
- 1040 compressed objects within 11 object streams
- 81 named destinations out of 1000 (max. 500000)
+ 1155 PDF objects out of 1200 (max. 8388607)
+ 1068 compressed objects within 11 object streams
+ 83 named destinations out of 1000 (max. 500000)
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

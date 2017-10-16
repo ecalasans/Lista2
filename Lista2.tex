@@ -53,6 +53,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[brazilian]{babel}
 \usepackage{amsmath}
+\usepackage{amssymb} % para símbolos
 \usepackage{enumerate}
 \usepackage{cancel}%para usar o cancelamento
 \usetheme{Madrid}
@@ -395,6 +396,18 @@
 			Portanto, o estimador de máxima verossimilhança para a $\sigma^{2}$ é $frac{n-1}{n}s^{2}$.
 		\end{frame}
 	\section{Questão 7}
+		\begin{frame}{Questão 7}
+			Sejam $\boldsymbol{s_{0}(t) = -1}$ e $\boldsymbol{s_{1}(t) = 1}$ e $\boldsymbol{n(t)\sim N(0,1)}$.  Para um sinal recebido $\boldsymbol{x(t) = s_{i}(t) + n(t), i={0,1}}$ têm-se as seguintes hipóteses para o sinal que foi transmitido:
+			\begin{itemize}
+				\item H\textsubscript{0}:  $s_{0}(t) \rightarrow x(t) = -1 + n(t)$
+				\item H\textsubscript{1}:  $s_{1}(t) \rightarrow x(t) = 1 + n(t)$
+			\end{itemize}
+			Se $n(t)$ é uma V.A com distribuição Normal e $s_{i}(t)$ é uma função constante, logo $x(t)$ também é uma V.A. com distribuição Normal.  Reformulando as hipóteses:
+			\begin{itemize}
+				\item H\textsubscript{0}:  $f(\boldsymbol{x}|H_{0}) \rightarrow f_{N}(\boldsymbol{x}) = \frac{1}{\sqrt{2\pi}}e^{\frac{-(x+1)^{2}}{2}},~ \forall X \sim N(-1,1)$
+				\item H\textsubscript{1}:   $f(\boldsymbol{x}|H_{1}) \rightarrow f_{N}(\boldsymbol{x}) = \frac{1}{\sqrt{2\pi}}e^{\frac{-(x-1)^{2}}{2}},~ \forall X \sim N(1,1)$
+			\end{itemize}
+		\end{frame}
 	\section{Questão 8}
 		\begin{frame}
 			\frametitle{Questão 8}
