@@ -325,8 +325,49 @@
 			\end{enumerate}
 		\end{frame}
 	\section{Questão 6}
+		\begin{frame}
+			\frametitle{Questão 6}
+		\end{frame}
 	\section{Questão 7}
 	\section{Questão 8}
+		\begin{frame}
+			\frametitle{Questão 8}
+			Seja a \textbf{distribuição Gaussiana Multivariada} dada por:$$f(\boldsymbol{x} \lvert \boldsymbol{\mu, C}) = \frac{1}{(2\pi)^{D/2}det(\boldsymbol{C})^{1/2}}exp(-\frac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu})^{T}\boldsymbol{C}^{-1}(\boldsymbol{x} - \boldsymbol{\mu}))$$
+			onde:
+			\begin{itemize}
+				\item D - \textit{espaço D-dimensional}
+				\item \textbf{C} - \textit{matriz de covariância}
+				\item $\boldsymbol{\mu}$ - \textit{vetor de médias}
+				\item $\boldsymbol{x}$ - \textit{vetor de V.A. independentes}
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Questão 8}
+			Da definição de \textbf{matriz de covariância}, para $\boldsymbol{x} = [x_{1}, x_{2}]$ e $\boldsymbol{\mu} = [\mu_{1}, \mu_{2}]$, temos:
+			\begin{align*}
+				\boldsymbol{C} &= E[(\boldsymbol{x} - \boldsymbol{\mu})^{T}(\boldsymbol{x} - \boldsymbol{\mu})]\\
+				&= E\bigg[\begin{bmatrix}
+					x_{1} - \mu_{1} \\ x_{2} - \mu_{2}
+				\end{bmatrix}
+				\begin{bmatrix}
+					x_{1} - \mu_{1} & x_{2} - \mu_{2}
+				\end{bmatrix}\bigg]\\
+				&= E\bigg[\begin{bmatrix}
+					(x_{1} - \mu_{1})(x_{1} - \mu_{1})&(x_{1} - \mu_{1})(x_{2} - \mu_{2})\\(x_{1} - \mu_{1})(x_{2} - \mu_{2})&(x_{2} - \mu_{2})(x_{2} - \mu_{2})
+				\end{bmatrix}
+				\bigg]\\
+				&= E\bigg[\begin{bmatrix}
+				(x_{1} - \mu_{1})^{2}&(x_{1} - \mu_{1})(x_{2} - \mu_{2})\\(x_{1} - \mu_{1})(x_{2} - \mu_{2})&(x_{2} - \mu_{2})^{2}
+				\end{bmatrix}
+				\bigg]\\
+				\boldsymbol{C} &= \begin{bmatrix}
+					\sigma_{1}^{2}&\sigma_{12}\\
+					\sigma_{21}&\sigma_{2}^{2}
+				\end{bmatrix}
+			\end{align*}
+			onde $\sigma_{12}$ é a covariância entre $x_{1}$ e $x_{2}$.
+		\end{frame}
 \end{document}
 
 
