@@ -63,7 +63,7 @@
 \begin{document}
 	\title{Lista 2}
 	\subtitle{Tópicos Especiais em Engenharia de Computação}
-	\author{Eric Calasans de Barros \and  Fagner Ferreira}
+	\author{\textbf{Eric Calasans de Barros} \and  \textbf{Fagner Freire de Oliveira} \\ \and Prof.:  \textbf{Adrião Dória}}
 	
 	\begin{frame}[plain]
 		\maketitle
@@ -261,7 +261,7 @@
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-                        Como $t > t_{1-\frac{\alpha}{2}} $ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.05}$
+                        Como $t > t_{1-\frac{\alpha}{2},19} $ \textbf{rejeitamos H\textsubscript{0} com} $\boldsymbol{\alpha = 0.05}$
 			\end{enumerate}
 		\end{frame}
 		
@@ -365,7 +365,7 @@
 				\frac{\partial^{2}[ \ln   L(\mu,\sigma^{2};x_{1},\dots,x_{n})]}{\partial \mu^{2}} &= \frac{\partial^{2}}{\partial \mu^{2}} \bigg[ \frac{1}{\sigma^{2}}\sum_{i=1}^{n}(x_{i}-\hat{\mu})\bigg]\\
 				&= -\frac{n}{\sigma^{2}} < 0
 			\end{align*}
-			Concluímos então que $\bar{x}$ é realmente um ponto de máximo e, por consequência, o estimador de máxima verossimilhança para $\mu$.
+			Concluímos então que $\boldsymbol{\bar{x}}$ é realmente um ponto de máximo e, por consequência, o estimador de máxima verossimilhança para $\mu$.
 		\end{frame}
 	
 		\begin{frame}{Questão 6}
@@ -393,7 +393,7 @@
 		\begin{frame}{Questão 6}
 			Dessa forma, é possível que o estimador de máxima verossimilhança para a variância populacional seja $ \frac{n-1}{n}s^{2}$.  Isto é confirmado se $ \frac{n-1}{n}s^{2}$ for considerado um ponto de máximo.  Para isto:
 			$$\frac{\partial^{2}[ \ln   L(\mu,\sigma^{2};x_{1},\dots,x_{n})]}{\partial \mu^{2}}  = -\frac{n}{2\sigma^2} < 0 $$
-			Portanto, o estimador de máxima verossimilhança para a $\sigma^{2}$ é $frac{n-1}{n}s^{2}$.
+			Portanto, o estimador de máxima verossimilhança para a $\sigma^{2}$ é $\boldsymbol{\frac{n-1}{n}s^{2}}$.
 		\end{frame}
 	\section{Questão 7}
 		\begin{frame}{Questão 7}
@@ -408,6 +408,85 @@
 				\item H\textsubscript{1}:   $f(\boldsymbol{x}|H_{1}) \rightarrow f_{N}(\boldsymbol{x}) = \frac{1}{\sqrt{2\pi}}e^{\frac{-(x-1)^{2}}{2}},~ \forall X \sim N(1,1)$
 			\end{itemize}
 		\end{frame}
+	
+		\begin{frame}{Questão 7}
+			\begin{enumerate}[a)]
+				\item \textbf{Teste de máxima verossimilhança}\\
+					\begin{align*}
+						\Lambda_{ML}(\boldsymbol{x}) &= \frac{f(\boldsymbol{x}|H_{1})}{f(\boldsymbol{x}|H_{0})} \overset{H_{1}}{>} \underset{H_{0}}{<} \frac{f(H_{0})}{f(H_{1})}
+					\end{align*}
+					Como $f(H_{0}) = f(H_{1})$:
+					\begin{align*}
+						\Lambda_{ML}(\boldsymbol{x}) &= \frac{f(\boldsymbol{x}|H_{1})}{f(\boldsymbol{x}|H_{0})} \overset{H_{1}}{>} \underset{H_{0}}{<} 1\\
+						&=\frac{1}{\cancel{\sqrt{2\pi}}}e^{-\frac{(x-1)^{2}}{2}} \cancel{\sqrt{2\pi}} \frac{1}{e^{-\frac{(x+1)^{2}}{2}}}\overset{H_{1}}{>} \underset{H_{0}}{<} 1\\
+						&= \frac{e^{-\frac{(x-1)^{2}}{2}}}{e^{-\frac{(x+1)^{2}}{2}}}\overset{H_{1}}{>} \underset{H_{0}}{<} 1
+					\end{align*}
+			\end{enumerate}
+		\end{frame}
+	
+		\begin{frame}{Questão 7}
+			Aplicando $\ln$ e calculando $\delta_{ML}$, temos:
+			\begin{align*}
+				\delta_{ML}[\Lambda_{ML}(\boldsymbol{x})] &= \ln \Bigg[ \frac{e^{-\frac{(x-1)^{2}}{2}}}{e^{-\frac{(x+1)^{2}}{2}}} \Bigg] \overset{H_{1}}{>} \underset{H_{0}}{<} \ln(1)\\
+				&= \ln[ e^{-\frac{(x-1)^{2}}{2}+{\frac{(x+1)^{2}}{2}}}]\overset{H_{1}}{>} \underset{H_{0}}{<} 0\\
+				&= \frac{(x-1)^{2}}{(x+1)^{2}}\overset{H_{1}}{>} \underset{H_{0}}{<} 0\\
+				&= \frac{1}{2}[(x+1)^{2} - (x-1)^2]\overset{H_{1}}{>} \underset{H_{0}}{<} 0\\
+				&= 2x \overset{H_{1}}{>} \underset{H_{0}}{<} 0\\
+				\delta_{ML}[\Lambda_{ML}(\boldsymbol{x})]&=x \overset{H_{1}}{>} \underset{H_{0}}{<} 0
+			\end{align*}
+		\end{frame}
+	
+		\begin{frame}{Questão 7}
+			Assim:
+			\begin{itemize}
+				\item R\textsubscript{0}: $x(t) < 0$
+				\item R\textsubscript{1}: $x(t) > 0$
+			\end{itemize}
+			Como $x(t) = 0.3$ concluímos que $\boldsymbol{s_{1}(t)}$ foi transmitido.\\
+			
+			\begin{enumerate}[b)]
+				\item \textbf{Teste de Bayes}\\
+				Dados $p(H_{0}) = \frac{1}{3},~p(H_{1}) = \frac{2}{3}, c_{00} = c_{11} = 0, c_{10} = 2$ e $c_{01} = 1$ e utilizando-se do raciocínio do item anterior para o cálculo de $\delta_{B}[\Lambda_{B}(x)]$, temos:
+				\begin{align*}
+					\delta_{B}[\Lambda_{B}(\boldsymbol{x})] = 2x \overset{H_{1}}{>} \underset{H_{0}}{<} \ln \Bigg[ \frac{c_{10} - c_{00}}{c_{01} - c_{11}} \cdot \frac{p(H_{0})}{p_(H_{1})}\Bigg] 
+				\end{align*}
+			\end{enumerate}
+		\end{frame}
+		
+		\begin{frame}{Questão 7}
+			\begin{align*}
+				\delta_{B}[\Lambda_{B}(\boldsymbol{x})] &= 2x \overset{H_{1}}{>} \underset{H_{0}}{<} \ln \Bigg[  \frac{2 - 0}{1 - 0} \cdot \frac{1/3}{2/3}\Bigg]\\
+				&= 2x \overset{H_{1}}{>} \underset{H_{0}}{<} \ln 1\\
+				&= 2x \overset{H_{1}}{>} \underset{H_{0}}{<} \rightarrow  x \overset{H_{1}}{>} \underset{H_{0}}{<} 0
+			\end{align*}
+				Assim:
+			\begin{itemize}
+				\item R\textsubscript{0}: $x(t) < 0$
+				\item R\textsubscript{1}: $x(t) > 0$
+			\end{itemize}
+			Como $x(t) = 0.3$ concluímos que $\boldsymbol{s_{1}(t)}$ foi transmitido.\\
+		\end{frame}
+		
+		\begin{frame}{Questão 7}
+			\begin{enumerate}[c)]
+				\item \textbf{Teste de Neyman-Pearson}\\
+				Para $\alpha = \lambda =  0.15$ e utilizando o raciocínio dos itens anteriores, calculamos:
+				\begin{align*}
+				\delta_{NP}[\Lambda_{NP}(\boldsymbol{x})] &= 2x  \overset{H_{1}}{>} \underset{H_{0}}{<} \ln~ \lambda\\
+				&= 2x  \overset{H_{1}}{>} \underset{H_{0}}{<} \ln~ 0.15\\
+				&= x  \overset{H_{1}}{>} \underset{H_{0}}{<} -1.9\\
+				\end{align*} 
+			\end{enumerate}
+		\end{frame}
+		
+		\begin{frame}{Questão 7}
+			Assim:
+			\begin{itemize}
+				\item R\textsubscript{0}: $x(t) < -1.9$
+				\item R\textsubscript{1}: $x(t) > -1.9$
+			\end{itemize}
+			Como $x(t) = 0.3$ concluímos que $\boldsymbol{s_{1}(t)}$ foi transmitido.\\
+		\end{frame}
 	\section{Questão 8}
 		\begin{frame}
 			\frametitle{Questão 8}
@@ -421,6 +500,7 @@
 			\end{itemize}
 		\end{frame}
 		
+
 		\begin{frame}
 			\frametitle{Questão 8}
 			Da definição de \textbf{matriz de covariância}, para $\boldsymbol{x} = [x_{1}, x_{2}]$ e $\boldsymbol{\mu} = [\mu_{1}, \mu_{2}]$, temos:
